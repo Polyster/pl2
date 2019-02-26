@@ -17,7 +17,7 @@ namespace HelloWorld
 				Console.WriteLine(greeting);
 			}
 
-			Console.WriteLine("Bye bitch");
+			Console.WriteLine("Bye");
 			Console.ReadKey();
 		}
 	}
