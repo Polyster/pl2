@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAdt", "TestAdt\TestAdt.csproj", "{9B945B08-89C2-4DD6-B82D-E9E7AE56A45C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdtLib", "AdtLib\AdtLib.csproj", "{9C681D93-7A4D-4F5A-BA55-4938E6821E8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B945B08-89C2-4DD6-B82D-E9E7AE56A45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B945B08-89C2-4DD6-B82D-E9E7AE56A45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B945B08-89C2-4DD6-B82D-E9E7AE56A45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B945B08-89C2-4DD6-B82D-E9E7AE56A45C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C681D93-7A4D-4F5A-BA55-4938E6821E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C681D93-7A4D-4F5A-BA55-4938E6821E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C681D93-7A4D-4F5A-BA55-4938E6821E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C681D93-7A4D-4F5A-BA55-4938E6821E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EDEC561-EE5F-4EF2-91B9-13CF0AC2F37A}
+	EndGlobalSection
+EndGlobal
