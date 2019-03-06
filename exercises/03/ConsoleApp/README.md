@@ -23,6 +23,29 @@
 	- seed mode
 - Prints the array and it's sum.
 - Iteratively sets elements of the array to **null** and prints the current size and state.
+
+### Expected output for params **5** and **0**
+    Seed mode: Random.
+    This is how the array looks like: 1, 0, 1, 7, 6,
+    This is the sum of array elements: 15
+    ------------------------------------------------------
+    Current state of array is Full
+    Current size of array is 5
+    ------------------------------------------------------
+    Current state of array is PartiallyFilled
+    Current size of array is 4
+    ------------------------------------------------------
+    Current state of array is PartiallyFilled
+    Current size of array is 3
+    ------------------------------------------------------
+    Current state of array is PartiallyFilled
+    Current size of array is 2
+    ------------------------------------------------------
+    Current state of array is PartiallyFilled
+    Current size of array is 1
+    ------------------------------------------------------
+    Current state of array is Empty
+    Current size of array is 0
 # Class diagram for Dynamic array
 ![alt text](https://github.com/Polyster/pl2/blob/master/exercises/03/ConsoleApp/DynamicArrayDiagram.png)
 # Seed mode enum
