@@ -14,9 +14,11 @@
 	- Indexer: 
 		- getter - obvious,
 		- setter - array can grow if neccessary.
-	- Current size property:
+	- Max size property:
 		- getter - obvious,
 		- setter - array can't shrink, an attempt throws exception.
+	- Current size property:
+		- getter - obvious
 ## Task 3: Testing application
 - Read two arguments from command line:
 	- size of the dynamic array
