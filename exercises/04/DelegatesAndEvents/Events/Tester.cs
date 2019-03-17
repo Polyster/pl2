@@ -1,4 +1,6 @@
-﻿using Events.Subscribers;
+﻿using System;
+using Events.EventArgs;
+using Events.Subscribers;
 
 namespace Events
 {

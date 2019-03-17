@@ -1,14 +1,21 @@
-﻿namespace Task3.Operations
+﻿using System;
+
+namespace Task3.Operations
 {
 	public class BinaryOperation<T>
 	{
-		private readonly int _a;
-		private readonly int _b;
+		private readonly T _a;
+		private readonly T _b;
 
-		public BinaryOperation(int a, int b)
+		public BinaryOperation(T a, T b)
 		{
 			_a = a;
 			_b = b;
+		}
+
+		public T Operate(Func<T, T, T> function)
+		{
+			return function(_a, _b);
 		}
 	}
 }

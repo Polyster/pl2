@@ -17,7 +17,7 @@ namespace Events
 
 		// an instance of the delegate
 		// TODO 3: Add event keyword after public and fix the errors
-		public SecondChangeHandler SecondChanged;
+		public event SecondChangeHandler SecondChanged;
 
 		// set the clock running
 		// it will raise an event for each new second
