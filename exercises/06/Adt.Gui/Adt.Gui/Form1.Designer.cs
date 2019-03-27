@@ -33,11 +33,11 @@
 			this.disconnectedGridView = new System.Windows.Forms.DataGridView();
 			this.connectedPage = new System.Windows.Forms.TabPage();
 			this.connectedGridView = new System.Windows.Forms.DataGridView();
+			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.loadButton = new System.Windows.Forms.Button();
 			this.countTxtBox = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.tabControl.SuspendLayout();
 			this.connectionlessPage.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.disconnectedGridView)).BeginInit();
@@ -72,9 +72,9 @@
 			// disconnectedGridView
 			// 
 			this.disconnectedGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.disconnectedGridView.Location = new System.Drawing.Point(9, 6);
+			this.disconnectedGridView.Location = new System.Drawing.Point(6, 6);
 			this.disconnectedGridView.Name = "disconnectedGridView";
-			this.disconnectedGridView.Size = new System.Drawing.Size(753, 352);
+			this.disconnectedGridView.Size = new System.Drawing.Size(756, 352);
 			this.disconnectedGridView.TabIndex = 0;
 			// 
 			// connectedPage
@@ -95,6 +95,25 @@
 			this.connectedGridView.Name = "connectedGridView";
 			this.connectedGridView.Size = new System.Drawing.Size(756, 352);
 			this.connectedGridView.TabIndex = 0;
+			// 
+			// tabPage1
+			// 
+			this.tabPage1.Controls.Add(this.dataGridView1);
+			this.tabPage1.Location = new System.Drawing.Point(4, 22);
+			this.tabPage1.Name = "tabPage1";
+			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage1.Size = new System.Drawing.Size(768, 364);
+			this.tabPage1.TabIndex = 2;
+			this.tabPage1.Text = "Generated";
+			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(7, 7);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(755, 351);
+			this.dataGridView1.TabIndex = 0;
 			// 
 			// loadButton
 			// 
@@ -121,25 +140,6 @@
 			this.label1.Size = new System.Drawing.Size(81, 13);
 			this.label1.TabIndex = 3;
 			this.label1.Text = "Number of rows";
-			// 
-			// tabPage1
-			// 
-			this.tabPage1.Controls.Add(this.dataGridView1);
-			this.tabPage1.Location = new System.Drawing.Point(4, 22);
-			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(768, 364);
-			this.tabPage1.TabIndex = 2;
-			this.tabPage1.Text = "Generated";
-			this.tabPage1.UseVisualStyleBackColor = true;
-			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(7, 7);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(755, 351);
-			this.dataGridView1.TabIndex = 0;
 			// 
 			// Form1
 			// 

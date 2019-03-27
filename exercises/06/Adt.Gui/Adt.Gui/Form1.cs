@@ -35,15 +35,17 @@ namespace Adt.Gui
 			{
 				string sqlStatement = $"SELECT TOP {count} * FROM Student";
 				var dataTable = new DataTable();
-				if (tabControl.SelectedIndex == 0)
+				if (this.tabControl.SelectedIndex == 0)
 				{
 					var connection = new SqlConnection(ConnectionString);
 					var dataAdapter = new SqlDataAdapter(sqlStatement, connection);
 
 					var dataSet = new DataSet();
+
 					dataAdapter.Fill(dataSet, TableName);
 
 					dataTable = dataSet.Tables[dataSet.Tables.IndexOf(TableName)]; // dataSet.Tables[0]
+					//dataTable = dataSet.GetTable(TableName);
 					disconnectedGridView.DataSource = dataTable;
 				}
 				else if (tabControl.SelectedIndex == 1)
