@@ -36,7 +36,7 @@ namespace Adt.Console
 				connection.Open();
 				command.ExecuteNonQuery();
 				command = new SqlCommand(
-					"insert into Student (Id, Firstname, Lastname, Email, Gender) values (1, 'Eliza', 'Radolf', 'eradolf0@csmonitor.com', 'Female');",
+					"INSERT INTO Student (Id, Firstname, Lastname, Email, Gender) values (1, 'Eliza', 'Radolf', 'eradolf0@csmonitor.com', 'Female');",
 					connection);
 				command.ExecuteNonQuery();
 			}

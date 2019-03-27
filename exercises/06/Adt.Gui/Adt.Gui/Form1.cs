@@ -39,7 +39,7 @@ namespace Adt.Gui
 				{
 					var connection = new SqlConnection(ConnectionString);
 					var dataAdapter = new SqlDataAdapter(sqlStatement, connection);
-					
+
 					var dataSet = new DataSet();
 					dataAdapter.Fill(dataSet, TableName);
 
@@ -49,16 +49,25 @@ namespace Adt.Gui
 				else if (tabControl.SelectedIndex == 1)
 				{
 					var connection = new SqlConnection(ConnectionString);
-					connection.Open();
-					var command = new SqlCommand(sqlStatement, connection);
-					var reader = command.ExecuteReader();
+					try
+					{
+						connection.Open();
+						var command = new SqlCommand(sqlStatement, connection);
+						var reader = command.ExecuteReader();
 
-					// while(reader.Read()){ reader... }
+						// while(reader.Read()){ reader... }
 
-					dataTable.Load(reader);
-					connectedGridView.DataSource = dataTable;
-					reader.Close();
-					connection.Close();
+						dataTable.Load(reader);
+						connectedGridView.DataSource = dataTable;
+					}
+					catch (Exception ex)
+					{
+						Console.WriteLine(ex.ToString());
+					}
+					finally
+					{
+						connection.Close();
+					}
 				}
 			}
 		}
