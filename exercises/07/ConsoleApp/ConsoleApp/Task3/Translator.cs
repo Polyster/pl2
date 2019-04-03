@@ -13,12 +13,12 @@ namespace ConsoleApp
 
 		public Translator(IEnumerable<KeyValuePair<string, string>> vocabulary)
 		{
-			
+			_data = vocabulary.ToDictionary(pair => pair.Key, pair => pair.Value);
 		}
 
 		public string Translate(string word)
 		{
-			throw new NotImplementedException();
+			return _data[word];
 		}
 	}
 }

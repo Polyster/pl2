@@ -11,7 +11,29 @@ namespace ConsoleApp
 	{
 		public int Compare(int x, int y)
 		{
-			throw new NotImplementedException();
+			if (x % 2 == 0 && y % 2 == 0)
+			{
+				if (x < y) return -1;
+				return 1;
+			}
+
+			if (x % 2 == 1 && y % 2 == 1)
+			{
+				if (x < y) return -1;
+				return 1;
+			}
+
+			if (x % 2 == 0 && y % 2 == 1)
+			{
+				return -1;
+			}
+
+			if (x % 2 == 1 && y % 2 == 0)
+			{
+				return 1;
+			}
+
+			return 0;
 		}
 	}
 }

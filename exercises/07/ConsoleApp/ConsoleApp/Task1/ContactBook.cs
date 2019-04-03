@@ -13,19 +13,19 @@ namespace ConsoleApp
 		public ContactBook(int size)
 		{
 			_data = new List<T>(size);
-			_index = 0;
+			_index = -1;
 		}
 
-		public void AddContact(IContact contact)
+		public void AddContact(T contact)
 		{
-			throw new NotImplementedException();
+			_data.Add(contact);
 		}
 
 		#region IEnumerable methods
 
 		public IEnumerator<T> GetEnumerator()
 		{
-			throw new NotImplementedException();
+			return _data.GetEnumerator();
 		}
 
 		IEnumerator IEnumerable.GetEnumerator()
@@ -37,24 +37,24 @@ namespace ConsoleApp
 
 		#region IEnumerator methods
 
-		public T Current => throw new NotImplementedException();
-
-		object IEnumerator.Current => Current;
-
 		public void Dispose()
 		{
-			throw new NotImplementedException();
+			// throw new NotImplementedException();
 		}
 
 		public bool MoveNext()
 		{
-			throw new NotImplementedException();
+			return _index++ < _data.Count;
 		}
 
 		public void Reset()
 		{
-			throw new NotImplementedException();
+			_index = -1;
 		}
+
+		public T Current => _data.ElementAt(_index);
+
+		object IEnumerator.Current => Current;
 
 		#endregion
 	}

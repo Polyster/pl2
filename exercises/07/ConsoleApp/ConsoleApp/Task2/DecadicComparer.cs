@@ -10,7 +10,17 @@ namespace ConsoleApp
 	{
 		public int Compare(int x, int y)
 		{
-			throw new NotImplementedException();
+			if (x % 10 < y % 10)
+			{
+				return 1;
+			}
+
+			if (x % 10 > y % 10)
+			{
+				return -1;
+			}
+
+			return 0;
 		}
 	}
 }

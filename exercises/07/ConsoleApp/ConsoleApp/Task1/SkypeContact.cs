@@ -19,7 +19,7 @@ namespace ConsoleApp
 
 		public int CompareTo(object obj)
 		{
-			throw new NotImplementedException();
+			return FirstName.Length - ((SkypeContact) obj).FirstName.Length;
 		}
 	}
 }
