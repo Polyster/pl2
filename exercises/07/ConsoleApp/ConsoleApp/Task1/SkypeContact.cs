@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-	class SkypeContact : IContact
+	class SkypeContact : IContact, IComparable
 	{
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
@@ -15,6 +15,11 @@ namespace ConsoleApp
 		public override string ToString()
 		{
 			return $"{FirstName} {LastName}";
+		}
+
+		public int CompareTo(object obj)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }
