@@ -44,8 +44,8 @@ namespace Adt.Gui
 
 					dataAdapter.Fill(dataSet, TableName);
 
-					dataTable = dataSet.Tables[dataSet.Tables.IndexOf(TableName)]; // dataSet.Tables[0]
-					//dataTable = dataSet.GetTable(TableName);
+					//dataTable = dataSet.Tables[dataSet.Tables.IndexOf(TableName)]; // dataSet.Tables[0]
+					dataTable = dataSet.GetTable(TableName);
 					disconnectedGridView.DataSource = dataTable;
 				}
 				else if (tabControl.SelectedIndex == 1)
