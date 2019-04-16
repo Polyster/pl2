@@ -34,5 +34,9 @@ namespace Streams.Daos
 		{
 			throw new NotImplementedException();
 		}
+		private void Save(List<Contact> contacts)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
