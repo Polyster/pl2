@@ -44,9 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Daos\SqlContactDao.cs" />
-    <Compile Include="Daos\SqlContactDaoImplemented.cs" />
     <Compile Include="Daos\XmlContactDao.cs" />
-    <Compile Include="Daos\XmlContactDaoImplemented.cs" />
     <Compile Include="Factories\SqlDbFactory.cs" />
     <Compile Include="Factories\XmlDbFactory.cs" />
     <Compile Include="Interfaces\IContactDao.cs" />

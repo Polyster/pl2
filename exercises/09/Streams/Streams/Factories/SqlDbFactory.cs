@@ -14,7 +14,7 @@ namespace Streams.Factories
 
 		public IContactDao CreateContactDao()
 		{
-			return new SqlContactDaoImplemented(_connectionString);
+			return new SqlContactDao(_connectionString);
 		}
 	}
 }

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml.Serialization;
 using Streams.Interfaces;
 using Streams.Models;
 
@@ -10,33 +9,68 @@ namespace Streams.Daos
 {
 	public class XmlContactDao : IContactDao
 	{
-		public IEnumerable<Contact> FindAllContacts()
+		private readonly string _fileName;
+
+		public XmlContactDao(string fileName)
 		{
-			throw new NotImplementedException();
+			_fileName = fileName;
 		}
 
 		public Contact FindById(int id)
 		{
-			throw new NotImplementedException();
+			var result = FindAllContacts().FirstOrDefault(c => c.Id == id);
+			return result;
 		}
 
-		public int CreateContact(Contact c)
+		public int CreateContact(Contact contact)
 		{
-			throw new NotImplementedException();
+			var contacts = FindAllContacts().ToList();
+			if (contacts.Count != 0)
+				contact.Id = contacts.Max(c => c.Id) + 1;
+			else contact.Id = 0;
+
+
+			contacts.Add(contact);
+
+			Save(contacts);
+			return contact.Id;
+		}
+
+		public IEnumerable<Contact> FindAllContacts()
+		{
+			var result = new List<Contact>();
+			if (File.Exists(_fileName))
+			{
+				using (var stream = new FileStream(_fileName, FileMode.Open))
+				{
+					var serializer = new XmlSerializer(typeof(List<Contact>));
+					result = (List<Contact>) serializer.Deserialize(stream);
+				}
+			}
+
+			return result;
 		}
 
 		public void UpdateContact(Contact c)
 		{
-			throw new NotImplementedException();
+			DeleteContact(c.Id);
+			CreateContact(c);
 		}
 
 		public void DeleteContact(int id)
 		{
-			throw new NotImplementedException();
+			var contacts = FindAllContacts().ToList();
+			contacts.Remove(contacts.FirstOrDefault(c => c.Id == id));
+			Save(contacts);
 		}
+
 		private void Save(List<Contact> contacts)
 		{
-			throw new NotImplementedException();
+			using (var stream = new FileStream(_fileName, FileMode.Create))
+			{
+				var serializer = new XmlSerializer(typeof(List<Contact>));
+				serializer.Serialize(stream, contacts);
+			}
 		}
 	}
 }

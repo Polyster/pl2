@@ -1,21 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="Streams.Daos.SqlContactDao">
-    <Position X="0.5" Y="2.75" Width="3.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAACACAAAAAIAAAAAAAQAAABAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>Daos\SqlContactDao.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Streams.Daos.XmlContactDao">
-    <Position X="4" Y="2.75" Width="3" />
-    <TypeIdentifier>
-      <HashCode>AAAAAIACACAAAAAIAAAAAAAQAAABAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Daos\XmlContactDao.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="Streams.Factories.SqlDbFactory">
     <Position X="7.5" Y="2.75" Width="2.75" />
     <TypeIdentifier>
@@ -38,6 +22,22 @@
       <HashCode>AAACAAAABCAAAAAEAEAAAAQAACBAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Contact.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="Streams.Daos.SqlContactDao">
+    <Position X="0.5" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAIAAAAAAAQAAABAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Daos\SqlContactDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Streams.Daos.XmlContactDao">
+    <Position X="4" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIACACAAAAQIAAAAAAAQAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Daos\XmlContactDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Streams.Interfaces.IContactDbFactory">
     <Position X="8.5" Y="0.5" Width="3" />
