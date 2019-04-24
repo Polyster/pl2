@@ -23,6 +23,7 @@
 ### Task 2: Create regex expressions:
 - ImageUrlPattern - will match whole url of image
 - FileNamePattern - will match the file name with extension
+- regex tool https://regex101.com/
 
 ### Task 3: Download images
 - Download images and save them
